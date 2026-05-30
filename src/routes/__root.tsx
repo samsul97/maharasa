@@ -78,17 +78,34 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Maharasa by Alfa 99 — Kue Tradisional, Fresh Everyday" },
-      { name: "description", content: "200+ varian kue nusantara, fresh setiap hari. Melayani retail & catering event." },
+      {
+        name: "description",
+        content: "200+ varian kue nusantara, fresh setiap hari. Melayani retail & catering event.",
+      },
       { name: "author", content: "Maharasa by Alfa 99" },
       { property: "og:title", content: "Maharasa by Alfa 99 — Kue Tradisional, Fresh Everyday" },
-      { property: "og:description", content: "200+ varian kue nusantara, fresh setiap hari. Melayani retail & catering event." },
+      {
+        property: "og:description",
+        content: "200+ varian kue nusantara, fresh setiap hari. Melayani retail & catering event.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Maharasa by Alfa 99 — Kue Tradisional, Fresh Everyday" },
-      { name: "twitter:description", content: "200+ varian kue nusantara, fresh setiap hari. Melayani retail & catering event." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d49f7bef-25e5-4357-8f66-78eb2824d06a/id-preview-c8afc69d--74fb426e-6b86-4059-b75a-bcc99a65daa9.lovable.app-1780123521979.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d49f7bef-25e5-4357-8f66-78eb2824d06a/id-preview-c8afc69d--74fb426e-6b86-4059-b75a-bcc99a65daa9.lovable.app-1780123521979.png" },
+      {
+        name: "twitter:description",
+        content: "200+ varian kue nusantara, fresh setiap hari. Melayani retail & catering event.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d49f7bef-25e5-4357-8f66-78eb2824d06a/id-preview-c8afc69d--74fb426e-6b86-4059-b75a-bcc99a65daa9.lovable.app-1780123521979.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d49f7bef-25e5-4357-8f66-78eb2824d06a/id-preview-c8afc69d--74fb426e-6b86-4059-b75a-bcc99a65daa9.lovable.app-1780123521979.png",
+      },
     ],
     links: [
       {
