@@ -14,7 +14,7 @@ import {
   Instagram,
 } from "lucide-react";
 
-import logo from "@/assets/maharasa-logo.png";
+import logo from "@/assets/maharasa_alfa99.jpeg";
 import heroImg from "@/assets/hero-kue.jpg";
 import bugisMandi from "@/assets/bugis-mandi.jpg";
 import kueCincin from "@/assets/kue-cincin.jpg";
@@ -44,8 +44,17 @@ export const Route = createFileRoute("/")({
   component: Landing,
 });
 
-const WA_LINK = "#";
-const CATALOG_LINK = "#";
+const WA_PHONE_DISPLAY = "+62 812-1277-4735";
+const WA_LINK = "https://wa.me/6281212774735";
+const CATALOG_LINK =
+  "https://drive.google.com/file/d/1aIiTUEFP1A7JDLJbzlLJmSuMFbW4WThE/view?usp=sharing";
+const GOFOOD_LINK =
+  "https://gofood.co.id/jakarta/restaurant/alfa-99-modernland-hartono-raya-dfeef8d1-bede-47c5-814d-0e5cbdf158bd";
+const GRABFOOD_LINK = "https://r.grab.com/g/2-1-6-CZEWLNBJE8M2HA";
+const MAPS_LINK = "https://maps.app.goo.gl/rQXTLXFBsGU6dDyz5";
+const INSTAGRAM_LINK = "https://www.instagram.com/maharasaalfa99/";
+const SHOPEEFOOD_LINK =
+  "https://shopee.co.id/universal-link/now-food/shop/37235?deep_and_deferred=1&shareChannel=whatsapp";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -110,9 +119,14 @@ const orderChannels = [
     href: WA_LINK,
     color: "bg-whatsapp text-whatsapp-foreground",
   },
-  { name: "GrabFood", Icon: GrabIcon, href: "#", color: "bg-[#00B14F] text-white" },
-  { name: "GoFood", Icon: GoFoodIcon, href: "#", color: "bg-[#E53935] text-white" },
-  { name: "ShopeeFood", Icon: ShopeeIcon, href: "#", color: "bg-[#EE4D2D] text-white" },
+  { name: "GrabFood", Icon: GrabIcon, href: GRABFOOD_LINK, color: "bg-[#00B14F] text-white" },
+  { name: "GoFood", Icon: GoFoodIcon, href: GOFOOD_LINK, color: "bg-[#E53935] text-white" },
+  {
+    name: "ShopeeFood",
+    Icon: ShopeeIcon,
+    href: SHOPEEFOOD_LINK,
+    color: "bg-[#EE4D2D] text-white",
+  },
 ];
 
 function Landing() {
@@ -126,6 +140,8 @@ function Landing() {
           </div>
           <a
             href={WA_LINK}
+            target="_blank"
+            rel="noreferrer"
             className="hidden items-center gap-2 rounded-full bg-whatsapp px-4 py-2 text-sm font-semibold text-whatsapp-foreground shadow-sm transition hover:opacity-90 sm:inline-flex"
           >
             <WhatsAppIcon className="h-4 w-4" /> WhatsApp
@@ -149,17 +165,42 @@ function Landing() {
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <a
                 href={WA_LINK}
+                target="_blank"
+                rel="noreferrer"
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-4 text-base font-semibold text-whatsapp-foreground shadow-lg shadow-whatsapp/30 transition hover:-translate-y-0.5 hover:shadow-xl"
               >
                 <WhatsAppIcon className="h-5 w-5" />
                 Pesan via WhatsApp
               </a>
               <a
-                href="#menu"
+                href={CATALOG_LINK}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-4 text-base font-semibold text-gold-foreground shadow-sm transition hover:-translate-y-0.5 hover:opacity-95"
               >
                 <BookOpen className="h-5 w-5" />
                 Lihat Katalog
+              </a>
+            </div>
+            <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
+              <a
+                href={MAPS_LINK}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 transition hover:text-primary"
+              >
+                <MapPin className="h-4 w-4" />
+                Alfa 99 Modernland, Hartono Raya
+              </a>
+              <span className="hidden h-1 w-1 rounded-full bg-muted-foreground/40 sm:block" />
+              <a
+                href={INSTAGRAM_LINK}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 transition hover:text-primary"
+              >
+                <Instagram className="h-4 w-4" />
+                @maharasaalfa99
               </a>
             </div>
             <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
@@ -305,6 +346,8 @@ function Landing() {
         <div className="mt-10 text-center">
           <a
             href={WA_LINK}
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-3.5 text-sm font-semibold text-whatsapp-foreground shadow-lg shadow-whatsapp/30 transition hover:-translate-y-0.5"
           >
             <WhatsAppIcon className="h-4 w-4" />
@@ -330,6 +373,8 @@ function Landing() {
             </div>
             <a
               href={CATALOG_LINK}
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-4 text-base font-semibold text-gold-foreground shadow-lg transition hover:-translate-y-0.5"
             >
               <BookOpen className="h-5 w-5" /> Buka Katalog
@@ -354,6 +399,8 @@ function Landing() {
             <a
               key={name}
               href={href}
+              target="_blank"
+              rel="noreferrer"
               className={`group flex flex-col items-center justify-center gap-3 rounded-2xl ${color} px-4 py-8 font-semibold shadow-md transition hover:-translate-y-1 hover:shadow-xl`}
             >
               <Icon className="h-10 w-10 transition group-hover:scale-110" />
@@ -376,18 +423,38 @@ function Landing() {
           <div className="space-y-3 text-sm text-cream/80">
             <div className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 text-gold" />
-              <span>Tersedia di pasar-pasar besar di kota Anda</span>
+              <a
+                href={MAPS_LINK}
+                target="_blank"
+                rel="noreferrer"
+                className="transition hover:text-gold"
+              >
+                Alfa 99 Modernland, Hartono Raya
+              </a>
             </div>
             <div className="flex items-start gap-3">
               <Clock className="mt-0.5 h-4 w-4 text-gold" />
               <span>Buka 06.00 WIB</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <MessageCircle className="mt-0.5 h-4 w-4 text-gold" />
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noreferrer"
+                className="transition hover:text-gold"
+              >
+                {WA_PHONE_DISPLAY}
+              </a>
             </div>
           </div>
           <div>
             <div className="text-sm font-semibold text-cream">Ikuti Kami</div>
             <div className="mt-3 flex items-center gap-3">
               <a
-                href="#"
+                href={INSTAGRAM_LINK}
+                target="_blank"
+                rel="noreferrer"
                 aria-label="Instagram"
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-cream/10 transition hover:bg-gold hover:text-espresso"
               >
@@ -395,6 +462,8 @@ function Landing() {
               </a>
               <a
                 href={WA_LINK}
+                target="_blank"
+                rel="noreferrer"
                 aria-label="WhatsApp"
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-cream/10 transition hover:bg-whatsapp"
               >
@@ -414,6 +483,8 @@ function Landing() {
       {/* Floating WhatsApp */}
       <a
         href={WA_LINK}
+        target="_blank"
+        rel="noreferrer"
         aria-label="Pesan via WhatsApp"
         className="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-2xl shadow-whatsapp/40 transition hover:scale-110"
       >
